@@ -1,16 +1,50 @@
-![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
+![spotify_logo](https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png)
 
-# Lab | API wrappers - Create your collection of songs & audio features
+# Song Recommender
+## Description
+
+In this project, I build a music recommender.
 
 
-#### Instructions 
+## Project approach
+
+### 1. Web Scraping: Create a list of top_100_songs and make a simple recommender
+
+From [Popvortex](www.popvortex.com), I scraped top 100 playlist and builded simple recommender. If the input song exists in top 100 playlist, it recommends a random song from the playlist.
+
+### 2. API wrappers: Create a spotify playlist with appx 5000 songs
+
+I found random playlists from different genre-time. Then I pulled the artist names from those lists. Then I choose 10 song from each artist and built my playlist.
+
+### 3. Unsupervised Learning: K-means clustering
+
+I clustered my playlist using silhouette score and elbow method.
+
+### 4. Song recommender: 
+If the input song is in top_100_songs list, it will recommend random song from the list. If it is not, it will recommend a song from the same cluster from spotify playlist
 
 
-To move forward with the project, you need to create a collection of songs with their audio features - as large as possible! 
+## Requirements
 
-These are the songs that we will cluster. And, later, when the user inputs a song, we will find the cluster to which the song belongs and recommend a song from the same cluster.
-The more songs you have, the more accurate and diverse recommendations you'll be able to give. Although... you might want to make sure the collected songs are "curated" in a certain way. Try to find playlists of songs that are diverse, but also that meet certain standards.
+Please install the following libraries:\
+*pandas*\
+*numpy*\
+*BeautifulSoup*\
+*spotipy*\
+*json*\
+*sklearn*\
+*matplotlib*
 
-The process of sending hundreds or thousands of requests can take some time - it's normal if you have to wait a few minutes (or, if you're ambitious, even hours) to get all the data you need.
 
-An idea for collecting as many songs as possible is to start with all the songs of a big, diverse playlist and then go to every artist present in the playlist and grab every song of every album of that artist. The amount of songs you'll be collecting per playlist will grow exponentially!
+## Instructions to run the code
+
+### Spotify for Developers:
+
+You need to sign up to [Spotify for Developers](https://developer.spotify.com/) and get your user credentials 
+
+### secrets.txt:
+
+Paste your cliendid and clientsecret to this file. (you will use this at 17th cell, remove the # and run the cell)
+
+
+Asli Veenstra- [@aslivns](https://github.com/aslivns/)
