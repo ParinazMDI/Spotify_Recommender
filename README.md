@@ -14,8 +14,6 @@ In this project, I build a music recommender.
 
 ### 3. Unsupervised Learning: K-means clustering
 
-I clustered my playlist using silhouette score and elbow method.
-
 ### 4. Song recommender: 
 If the input song is in top_200_songs list, it will recommend random song from the list. If it is not, it will recommend a song from the same cluster from spotify playlist
 
